@@ -1,0 +1,108 @@
+---
+title             : "Evaluating Factors Enabling Graduation with the High School Longitudinal Study of 2009"
+shorttitle        : "HS Graduation Factors"
+
+author: 
+  - name          : "Janette Avelar"
+    affiliation   : "1, 2"
+    corresponding : yes    # Define only one corresponding author
+    address       : "1585 E 13th Ave, Eugene, OR 97403"
+    email         : "javelar7@uoregon.edu"
+    role: # Contributorship roles (e.g., CRediT, https://credit.niso.org/)
+      - "Conceptualization"
+      - "Data curation"
+      - "Formal analysis"
+      - "Writing - Original Draft Preparation"
+      - "Writing - Review & Editing"
+
+affiliation:
+  - id            : "1"
+    institution   : "University of Oregon"
+  - id            : "2"
+    institution   : "Arizona State University"
+
+authornote: |
+  Janette Avelar is a PhD Student in the Quantitative Research Methods in Education program at the University of Oregon College of Education.
+  
+  This project was completed for EDLD654 Machine Learning in Fall 2023. The full GitHub repo can be found here: 
+
+abstract: |
+  Understanding the factors that support high school graduation is important identify where additional resources may be used to support secondary students.
+  The field of Machine Learning opens the possibility for large-scale data analysis that can predict outcomes like graduation from a much larger number of predictors that traditional statistical approaches may not be able to handle.
+  This exploratory project compares the performance of a traditional logsitic regression model against a classification model with a ridge penalty and a classification decision tree model to predict graduation using the High School Longitudinal Study of 2009 from the National Center of Education Statistics.
+  I found that the classification model with a ridge penalty performed best, with the decision tree model performing just slightly worse.
+  Further, I found that missing GPA scores for certain content areas, the racial identification of the student's science teacher, and parents' occupation were the most important factors in predicting whether or not a student graduated.
+  These findings open the potential for future avenues of study, particularly in terms of the racial diversity of the STEM teaching force, the potential effect of racial matching between students and instructors, and the role of parents' occupation in shaping student trajectories.
+  
+  <!-- https://tinyurl.com/ybremelq -->
+  
+keywords          : "graduation, high school, machine learning, regression, decision trees"
+wordcount         : "X"
+
+bibliography      : "r-references.bib"
+
+floatsintext      : no
+linenumbers       : yes
+draft             : no
+mask              : no
+
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+r_refs("r-references.bib")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+# Introduction
+
+The field of Machine Learning opens the possibility for large-scale data analysis that can have useful implications for the field of education research. In particular, it allows for the prediction of outcomes from a much larger number of predictors than traditional statistical approaches may be able to handle. Resulting findings can help illuminate new areas for research that may otherwise be overlooked and can also help with variable selection when building models from exceptionally large datasets. In this exploratory project, I demonstrate this by using machine learning to predict graduation outcomes for high school students using a subset of the publicly available High School Longitudinal Study of 2009 (HSLS) dataset provided by the National Center for Education Statistics (NCES).
+
+NCES creates and hosts publicly available datasets that education researchers can explore and analyze. NCES datasets tend to be incredibly large and often track data over time, adding complexity to potential analysis and making it more difficult for researchers to identify models when they have a plethora of variables to choose from. 
+
+........that compares the performance of a traditional logsitic regression model against a classification model with a ridge penalty and a classification decision tree model to predict graduation using the High School Longitudinal Study of 2009 from the National Center of Education Statistics.
+
+## Research problem
+The HSLS dataset catalogues important potential indicators that may influence graduation and postsecondary enrollment. This includes student, parent, teacher, and administrator questionnaires that detail both student experiences and characteristics as well as 
+
+# Methods
+We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
+
+## Description of the data
+
+## Description of the models
+
+### Logistic regression model
+
+### Ridge regression model
+
+### Decision tree model
+
+## Data analysis
+We used `r cite_r("r-references.bib")` for all our analyses.
+
+
+# Results
+
+## Model performance and fit
+
+# Discussion
+
+
+\newpage
+
+# References
+
+::: {#refs custom-style="Bibliography"}
+:::
